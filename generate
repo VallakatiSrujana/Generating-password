@@ -1,7 +1,6 @@
 import random
 import string
 
-# Global strings to be used to randomly generate password components
 string_char = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 string_num = '0123456789'
 string_special = '~!@#$%^&*()'
@@ -13,7 +12,6 @@ def userInput():
     return(length, use_special_chars, use_numbers)
 
 def generate_password(length, use_special_chars, use_numbers):
-    """Generates a random password based on user preferences."""
     password = ''
     for _ in range(length-2):
         password+=random.choice(string_char)
